@@ -8,22 +8,28 @@
 import UIKit
 
 class TwoScreenViewController: UIViewController {
+    
+    
+    @IBOutlet weak var FactLabelMusic: UILabel!
+    
+    
+    private let apiManager = FunFactAPIManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadNewJoke()
+    }
 
-        // Do any additional setup after loading the view.
+    @IBAction func didTapNext(_ sender: UIButton) {
+        
+        loadNewJoke()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func loadNewJoke() {
+        apiManager.getRandomFact(category: "music") { [weak self] fact in
+        self?.FactLabelMusic.text = fact?.value
+            
+        }
     }
-    */
-
 }

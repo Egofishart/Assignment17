@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,20 +13,68 @@
             <objects>
                 <viewController storyboardIdentifier="Three" id="Y6W-OH-hqX" customClass="ThreeScreenViewController" customModule="ნ_დანელია_დავალება_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8N-Kk-6OL">
+                                <rect key="frame" x="79.666666666666686" y="344.66666666666669" width="271" height="243.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="19q-Wa-5Vs"/>
+                                    <constraint firstAttribute="height" constant="243" id="ufv-tr-OhV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28b-iu-gBg">
+                                <rect key="frame" x="104" y="805" width="222" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="7QF-Zh-iVV"/>
+                                    <constraint firstAttribute="width" constant="222" id="Yp7-bl-QBE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Fun Fact">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="DidTapMovie:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gFs-0q-NG9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Fun Fact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TJ-kG-8xo">
+                                <rect key="frame" x="20" y="118" width="390" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="RZ1-vU-enJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="Z8N-Kk-6OL" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="10g-yV-cOY"/>
+                            <constraint firstItem="6TJ-kG-8xo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="1OX-Ck-Qxe"/>
+                            <constraint firstItem="6TJ-kG-8xo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7oZ-4p-Ajw"/>
+                            <constraint firstItem="6TJ-kG-8xo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="FN2-j5-0eq"/>
+                            <constraint firstItem="28b-iu-gBg" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Ry6-4c-nDW"/>
+                            <constraint firstItem="Z8N-Kk-6OL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fcr-Eq-u4f"/>
+                            <constraint firstItem="28b-iu-gBg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qHX-hl-cOm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6TJ-kG-8xo" secondAttribute="trailing" constant="20" id="xbo-rN-rvm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="MovieLabel" destination="Z8N-Kk-6OL" id="Gfp-Z9-n9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="131"/>
+            <point key="canvasLocation" x="139.69465648854961" y="130.98591549295776"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.67450980390000004" green="0.49803921569999998" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
